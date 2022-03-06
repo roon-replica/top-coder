@@ -1,4 +1,4 @@
-public class Sample{
+public class SampleSimul {
  public static void main(String[] args) {
   int[] result =  pouring(
    new int[] {20,20}, 
