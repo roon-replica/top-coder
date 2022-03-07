@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SampleBruteforce2 {
+public class InvitationRefactor {
     public static void main(String[] args) {
         int maxResult = bestInvitation(
                 new String[]{"tennis", "tennis", "crossfit", "dance", "code", "chess", "chess"},

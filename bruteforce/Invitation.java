@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SampleBruteforce {
+public class Invitation {
 
     public static void main(String[] args) {
         int maxResult = bestInvitation(
