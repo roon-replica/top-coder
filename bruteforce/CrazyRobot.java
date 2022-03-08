@@ -1,12 +1,13 @@
 public class CrazyRobot {
     public static void main(String[] args) {
-        System.out.println(getProbability(5, 25, 25, 25, 25));
+//        System.out.println(getProbability(2, 25, 25, 25, 25));
+        System.out.println(getProbability(2, 50, 50, 0, 0));
     }
 
     public static double getProbability(int n, int east, int west, int south, int north) {
         probs = new int[]{west, north, east, south};
-        prob = 1;
-        dfs(50, 50, n);
+        prob = 0;
+        dfs(50, 50, n, 1);
         return prob;
     }
 
@@ -15,19 +16,23 @@ public class CrazyRobot {
     private static int[] probs;
     private static double prob;
 
-    private static void dfs(int r, int c, int moveLimit) {
-        if (visited[r][c] || moveLimit == 0) return;
-        System.out.println(r + " " + c + " " + prob);
+    private static void dfs(int r, int c, int moveLimit, double hereProb) {
+        if (visited[r][c]) return;
+
+        if (moveLimit == 0) {
+            prob += hereProb;
+            return;
+        }
+
         visited[r][c] = true;
 
         for (int i = 0; i < dirs.length; i++) {
             int nr = r + dirs[i][0];
             int nc = c + dirs[i][1];
 
-            prob *= probs[i];
-            prob /= 100;
-
-            dfs(nr, nc, moveLimit - 1);
+            dfs(nr, nc, moveLimit - 1, hereProb * probs[i] / 100);
         }
+
+        visited[r][c] = false;
     }
 }
