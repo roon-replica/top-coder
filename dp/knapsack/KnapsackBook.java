@@ -1,3 +1,5 @@
+package knapsack;
+
 public class KnapsackBook {
     public static void main(String[] args) {
         weights = new int[]{3, 4, 1, 2, 3};
