@@ -10,7 +10,7 @@
    - doubly linked list 
 
  - 잘 모름
-   - synchronization?, synchronizedList?, mutex??
+   - synchronization?, synchronizedList?, mutex??, modeCount?
    - serialization? transient, serialVersionUID?
    - generic?
    - iterator pattern
