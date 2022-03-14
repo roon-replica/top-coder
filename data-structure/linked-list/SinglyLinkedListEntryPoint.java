@@ -31,5 +31,8 @@ public class SinglyLinkedListEntryPoint {
         list2.add(list2.size(), "add-last-again");
         System.out.println(list2);
 
+        list2.removeFirst();
+        System.out.println(list2+" "+list2.size());
+
     }
 }

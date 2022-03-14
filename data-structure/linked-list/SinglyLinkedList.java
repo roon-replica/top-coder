@@ -58,6 +58,8 @@ public class SinglyLinkedList<T> {
         final Node<T> f = first;
         if (f == null) throw new NoSuchElementException();
         first = f.next;
+
+        size--;
         return f.content;
     }
 
