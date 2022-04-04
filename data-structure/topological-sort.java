@@ -66,8 +66,9 @@ class Solution {
     
     // 위상정렬
     // - directed graph
-    // - poll here
-    // - for nxt in graph[here] inDegree[nxt]--;
+    // - put all nodes that inDegree is 0
+    // - poll 'here' node
+    // - for 'nxt' node in graph[here] inDegree[nxt]--;
     // - if (inDegree[nxt] == 0), Queue.add(nxt) ... 
     // - if (count(visited node) == total) possible, else impossible 
     // == 사이클 존재 여부
