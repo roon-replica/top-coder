@@ -2,11 +2,11 @@ import java.util.*;
 
 // 시간 구간이 주어질 때 특정 시간에 최대 몇개의 구간이 겹칠지 구하기
 // sort by start time ascending
-// use min heap (end time)
+// use min heap (end time, ascending)
 // iterate times
-// if now_start_time > heap_first_end_time, remove from heap (iterate)
+// if now_start_time > heap_first_end_time, remove from heap, count-- (iterate)
 // because heap_first is out of range
-// pq.add(now_end_time)
+// pq.add(now_end_time), count++
 
 public class PriorityQueueUtil{   
      public static void main(String []args){
@@ -25,18 +25,13 @@ public class PriorityQueueUtil{
         int maxCount = 0;
         int count = 0;
         
+        // 'var' requires jdk >= 10
         var pq = new PriorityQueue<Integer>();  //min heap
         
         for(int[] time : times){
             int s = time[0];
             int e = time[1];
             maxCount = Math.max(maxCount,count);
-            
-            if(pq.isEmpty()){
-                pq.add(e);
-                count++;
-                continue;
-            }
             
             for(; !pq.isEmpty() && pq.peek() < s;){
                 pq.poll();
