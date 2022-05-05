@@ -80,4 +80,5 @@ public class kruskal {
             return true;
         }
     }
+
 }
