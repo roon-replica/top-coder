@@ -15,7 +15,7 @@
 // (-) => max - min
 
 // 사칙연산/LV4
-class Solution {
+class ArithmeticOperationsDP {
     public int solution(String arr[]) {
         int answer = 0;
         

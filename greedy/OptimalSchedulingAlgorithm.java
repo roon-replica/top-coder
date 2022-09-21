@@ -20,7 +20,7 @@
 // LV3 / 디스크 컨트롤러
 import java.util.*;
 
-class Solution {
+class OptimalSchedulingAlgorithm {
     public int solution(int[][] jobs) {
         int answer = 0;
         int N = jobs.length;

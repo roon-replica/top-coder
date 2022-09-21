@@ -6,7 +6,7 @@
 // => 20만 * 50 = 1000만 => 가능
 
 // 무지의 먹방 라이브/LV4
-class Solution {
+class Muzi {
     public int solution(int[] foodTimes, long k) {
         int answer = 0;        
         

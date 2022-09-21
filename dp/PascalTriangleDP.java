@@ -3,7 +3,7 @@
 // 약간의 트릭?은 위에서부터 아래가 아니라 아래에서부터 위로 올라가는 이미지를 떠올려보는 것인듯
 
 // LV3 / 정수 삼각형
-class Solution {
+class PascalTriangleDP {
     public int solution(int[][] triangle) {
         int answer = 0;
         int R = triangle.length;

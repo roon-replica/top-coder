@@ -23,7 +23,7 @@
 
 import java.util.*;
 
-class Solution {
+class TopologicalSortExample {
     public boolean solution(int n, int[][] path, int[][] order) {
         boolean answer = true;
         List<Integer>[] adjs = new ArrayList[n];

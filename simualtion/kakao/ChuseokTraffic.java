@@ -1,11 +1,11 @@
-// LV3/2018 카카오 추석 트래픽
+package kakao;// LV3/2018 카카오 추석 트래픽
 // 왜 어려웠지... 직선 코스가 있는데 이리저리 돌아가면서 풀려다보니 풀이가 복잡해졌다
 // 문제의 조건도 놓쳤었다. 입력이 응답완료시간을 기준으로 정렬되어 주어지는 것..
 // 무조건 단순한 방법을 떠올려야 한다.. 그래야 확실히 동작한다.... 
 
 import java.util.*;
 
-class Solution {
+class ChuseokTraffic {
     public int solution(String[] lines) {
         int answer = 0;
         int N = lines.length;

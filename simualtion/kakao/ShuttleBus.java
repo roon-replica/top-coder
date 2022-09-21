@@ -1,4 +1,4 @@
-// 카카오 코테 -> 구현이 메인
+package kakao;// 카카오 코테 -> 구현이 메인
 // *** 뭘 하든 큰 그림은 그려놓고 시작하라. 되도록 확실한 방법을 머리속이나 종이에 시뮬레이션하고 시작하라.
 // *** 큰 그림을 그려놓지 않고 눈 앞의 수만 두다 보면 절대 좋은 수를 둘 수 없다.
 
@@ -25,7 +25,7 @@
 //LV3/셔틀버스
 import java.util.*;
 
-class Solution {
+class ShuttleBus {
     public String solution(int n, int t, int m, String[] timetable) {
         String answer = "";
         

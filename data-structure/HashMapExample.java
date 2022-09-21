@@ -3,7 +3,7 @@
 import java.util.*;
 import java.util.stream.*;
 
-class Solution {
+class HashMapExample {
     public String[] solution(String[] record) {
         Map<String,String> idToName = new HashMap<>();
         final String ENTER = "님이 들어왔습니다.";

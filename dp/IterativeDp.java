@@ -20,7 +20,7 @@
 // 아.. recursive 대신 iterative하게...
 
 // LV4/도둑질
-class Solution {
+class IterativeDp {
     public int solution(int[] money) {
         int answer = 0;
         
