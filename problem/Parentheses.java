@@ -17,6 +17,13 @@
 
 // 괄호문자열 만들어갈 때 ( 보다 )가 더 많으면 무조건 잘못된거?
 
+// 그리고 여는 괄호, 닫는 괄호 개수도 각각 N개 여야만 하네..!
+
+// 총평
+// - 가지치기하면 시간 안에 동작할 거라 생각은 했음.
+// - 근데 가지치기 조건을 완벽히 생각해내지 못해서 시간초과를 해결하지 못했었음.
+
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -46,7 +53,7 @@ public class Parentheses {
             return;
         }
 
-        if(openCount < closeCount){
+        if(openCount < closeCount || openCount > N || closeCount > N){
             return;
         }
 
