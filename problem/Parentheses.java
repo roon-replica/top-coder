@@ -15,6 +15,7 @@
 // 아 근데 가지치기 적용하기가...
 // 중간문자열이 잘못된 문자열인지 어케 판단하지.. 모르겠다...
 
+// 괄호문자열 만들어갈 때 ( 보다 )가 더 많으면 무조건 잘못된거?
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,8 @@ public class Parentheses {
     private static final Stack<Character> stack = new Stack<>();
     private static final List<Character> parentheses = new ArrayList<>();
     private static int count;
+    int openCount;
+    int closeCount;
 
     private void dfs(int idx) {
         if (idx == N * 2) {
@@ -43,15 +46,27 @@ public class Parentheses {
             return;
         }
 
+        if(openCount < closeCount){
+            return;
+        }
+
         // 1. add '('
         parentheses.add('(');
+        openCount++;
+
         dfs(idx + 1);
+
         parentheses.remove(parentheses.size() - 1);
+        openCount--;
 
         // 2. add ')'
         parentheses.add(')');
+        closeCount++;
+
         dfs(idx + 1);
+
         parentheses.remove(parentheses.size() - 1);
+        closeCount--;
     }
 
     private boolean validate() {
